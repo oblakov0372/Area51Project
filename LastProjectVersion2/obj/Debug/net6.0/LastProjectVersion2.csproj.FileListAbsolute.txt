@@ -1,0 +1,15 @@
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\bin\Debug\net6.0\LastProjectVersion2.exe
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\bin\Debug\net6.0\LastProjectVersion2.deps.json
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\bin\Debug\net6.0\LastProjectVersion2.runtimeconfig.json
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\bin\Debug\net6.0\LastProjectVersion2.dll
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\bin\Debug\net6.0\LastProjectVersion2.pdb
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\LastProjectVersion2.csproj.AssemblyReference.cache
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\LastProjectVersion2.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\LastProjectVersion2.AssemblyInfoInputs.cache
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\LastProjectVersion2.AssemblyInfo.cs
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\LastProjectVersion2.csproj.CoreCompileInputs.cache
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\LastProjectVersion2.dll
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\refint\LastProjectVersion2.dll
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\LastProjectVersion2.pdb
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\LastProjectVersion2.genruntimeconfig.cache
+D:\C#\Courent programming\LastProjectVersion2\LastProjectVersion2\obj\Debug\net6.0\ref\LastProjectVersion2.dll
