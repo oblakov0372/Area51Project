@@ -23,7 +23,7 @@ namespace LastProjectVersion2.Models
         {
             Elevator = elevator;
         }
-        public bool isOpened(Agent agent)
+        public bool OpenDoor(Agent agent)
         {
             var permission = permissions[agent.SecurityLevel].Where(f => f == Elevator.CurrentFloor).ToList();
 

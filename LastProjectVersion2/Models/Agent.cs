@@ -9,7 +9,7 @@ namespace LastProjectVersion2.Models
 {
     /*
      walk on the floor(30%)
-     ride the elevator(50%)
+     ride the elevator(30%)
      leave from area(20%)
      */
     public enum SecurityLevel
@@ -23,7 +23,6 @@ namespace LastProjectVersion2.Models
         public int Id { get; set; }
         public SecurityLevel SecurityLevel { get; set; }
         public Floor CurrentFloor { get; set; }
-        public Floor TargetFloor { get; set; }
         public bool InArea { get; set; }
         private Elevator Elevator { get; set; }
 
@@ -34,7 +33,6 @@ namespace LastProjectVersion2.Models
             Id = id;
             Elevator = elevator;
             SecurityLevel = (SecurityLevel)rnd.Next(0, 3);
-            TargetFloor = new Floor((EFloor)rnd.Next(0, 4));
             CurrentFloor = new Floor(EFloor.G);
             InArea = true;
         }
@@ -54,12 +52,14 @@ namespace LastProjectVersion2.Models
 
         public void Work()
         {
-            Console.WriteLine($"Agent with Id {Id} came to work\n");
+            Thread.Sleep(200);
+            Console.WriteLine($"Agent with Id {Id} came to work");
             while (true)
             {
                 if (Throw(30))
                 {
                     CallElevator(CurrentFloor.ButtonToCallElevator);
+                    Console.WriteLine($"Agent{Id} entered the elevator");
                     while (true)
                     {
                         Button clickedButton;
@@ -67,10 +67,10 @@ namespace LastProjectVersion2.Models
                         {
                             clickedButton = Elevator.Buttons[rnd.Next(0, 4)];
                         } while (clickedButton.Floor == CurrentFloor.Name);
-
+                        Console.WriteLine($"Agent{Id} click button {clickedButton.Floor}");
                         SelectFloor(clickedButton);
 
-                        if (Throw(90) && Elevator.ElevatorDoor.isOpened(this))
+                        if (Throw(90) && Elevator.ElevatorDoor.OpenDoor(this))
                         {
                             Console.WriteLine($"Agent {Id} leave from elevator");
                             Elevator.Leave();
@@ -85,13 +85,12 @@ namespace LastProjectVersion2.Models
                 }
                 if (Throw(20))
                 {
-                    if (CurrentFloor.Name != Elevator.CurrentFloor)
+                    if (CurrentFloor.Name != EFloor.G)
                     {
                         CallElevator(CurrentFloor.ButtonToCallElevator);
-                    }
-                    if (CurrentFloor.Name != EFloor.G)
                         SelectFloor(Elevator.Buttons.Where(b => b.Floor == EFloor.G).FirstOrDefault());
-
+                        Elevator.Leave();
+                    }
                     Console.WriteLine($"Agent {Id} go home");
                     break;
                 }

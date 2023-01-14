@@ -24,7 +24,7 @@ namespace LastProjectVersion2
         }
         public void Start()
         {
-            for (int i = 1; i < 3; i++)
+            for (int i = 1; i <= 20; i++)
             {
                 Agent agent = new Agent(i, Elevator);
                 var thread = new Thread(() =>

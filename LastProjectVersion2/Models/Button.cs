@@ -17,7 +17,7 @@ namespace LastProjectVersion2.Models
         }
         public void CallElevator(Agent agent,Elevator elevator)
         {
-            Console.WriteLine($"Agent{agent.Id} Call elevetor for floor {Floor}");
+            Console.WriteLine($"Agent{agent.Id} call elevator");
             if (elevator.TryCall())
             {
                 ElevatorGo(agent, elevator);
@@ -25,11 +25,6 @@ namespace LastProjectVersion2.Models
         }
         public void ElevatorGo(Agent agent, Elevator elevator)
         {
-            Console.WriteLine($"Agent{agent.Id} click button {Floor}");
-            foreach (var button in elevator.Buttons)
-            {
-                button.Disabled = true;
-            }
             elevator.Go(this, agent);
         }
     }

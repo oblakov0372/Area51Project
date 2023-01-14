@@ -48,12 +48,12 @@ namespace LastProjectVersion2.Models
             }
             agent.CurrentFloor.Name = CurrentFloor;
             Console.WriteLine($"Elevator in your floor {CurrentFloor}");
-            if (ElevatorDoor.isOpened(agent))
+            if (ElevatorDoor.OpenDoor(agent))
             {
-                Console.WriteLine("Door is opening");
+                Console.WriteLine("Door has opened");
                 return;
             }
-            Console.WriteLine("You have not permissions\n");
+            Console.WriteLine($"Agent{agent.Id}, you have not permission");
 
         }
     }
